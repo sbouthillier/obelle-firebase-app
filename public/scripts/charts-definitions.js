@@ -1,16 +1,16 @@
-// Create Temperature Chart
-function createTemperatureChart() {
-    var chart = new Highcharts.Chart({
+// Create Water Level Chart
+function createWaterLevelChart() {
+    let chart = new Highcharts.Chart({
       time:{
         useUTC: false
       },
       chart:{ 
-        renderTo:'chart-temperature',
+        renderTo:'chart-water-level',
         type: 'spline' 
       },
       series: [
         {
-          name: 'DS18B20'
+          name: 'Niveau'
         }
       ],
       title: { 
@@ -30,7 +30,7 @@ function createTemperatureChart() {
       },
       yAxis: {
         title: { 
-          text: 'Température Degrés Celsius' 
+          text: 'Niveau de remplissage du réservoir' 
         }
       },
       credits: { 
